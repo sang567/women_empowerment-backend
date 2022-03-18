@@ -20,9 +20,5 @@ public class DocumentSectionService {
 		documentSectionDao.addDocumentSection(ds);
 	}
 
-	@Transactional
-	public List<DocumentSection> fetchEach() {
-		return documentSectionDao.fetchAll();
-
-	}
+	
 }
