@@ -20,6 +20,7 @@ public class UserContactService {
 		userContactDao.addUserContact(ucd);
 	}
 
+	@Transactional
 	public List<UserContactDetails> fetchEach() {
 		return userContactDao.fetchAll();
 

@@ -12,10 +12,12 @@ import com.lti.entity.NGO;
 @Component
 public class NGODao extends GenericDao{
 	
+	@Transactional
 	public void addNGO(NGO ngo) {
 		entityManager.persist(ngo);
 	}
 
+	@Transactional
 	public NGO fetchNGO(int id) {
 		return entityManager.find(NGO.class, id);
 	}
