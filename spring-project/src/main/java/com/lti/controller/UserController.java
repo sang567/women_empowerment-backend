@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.lti.entity.NGO;
 import com.lti.entity.ResponseDTO;
 import com.lti.entity.User;
 import com.lti.service.UserService;
@@ -28,7 +27,6 @@ public class UserController {
 		userService.add(user);
 		return "{\"status\" : \"User Record  Added Successfully!\"}";
 	}
-	@CrossOrigin
 	@RequestMapping(path = "/userlogin.api")
 	public String verifyUser(@RequestBody User login) {
 		User user = userService.verifyUser(login);
@@ -38,8 +36,6 @@ public class UserController {
 			return "{\"status\" : \"Sorry Your Details are incorrect!\"}";
 		}
 	}
-
-	@CrossOrigin
 	@RequestMapping(path = "/userVerify.api")
 	public ResponseDTO verify(@RequestBody User login) {
 		ResponseDTO responseDTO = userService.confirmLogin(login);

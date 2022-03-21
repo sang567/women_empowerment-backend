@@ -16,7 +16,7 @@ public class UserContactController {
 	@Autowired
 	private UserContactService userContactService;
 
-	@RequestMapping(path = "/userContact/add")
+	@RequestMapping("/userContact.api")
 	public String add(@RequestBody UserContactDetails ucd) {
 		userContactService.add(ucd);
 		return "{\"status\" : \"User Contact  Details  Added Successfully!\"}";

@@ -18,13 +18,12 @@ public class NGOController {
 	@Autowired
 	private NGOService ngoService;
 
-	@RequestMapping(path = "/ngo.api")
+	@RequestMapping("/ngo.api")
 	public String add(@RequestBody NGO ngo) {
 		ngoService.add(ngo);
 		return "{\"status\" : \"NGO Record Added Successfully!\"}";
 	}
-	@CrossOrigin
-	@RequestMapping(path = "/ngologin.api")
+	@RequestMapping("/ngologin.api")
 	public String verifyNgo(@RequestBody NGO login) {
 		NGO ngo = ngoService.verifyNgo(login);
 		if (ngo != null) {
@@ -33,9 +32,7 @@ public class NGOController {
 			return "{\"status\" : \"Sorry Your Details are incorrect!\"}";
 		}
 	}
-
-	@CrossOrigin
-	@RequestMapping(path = "/ngoVerify.api")
+	@RequestMapping("/ngoVerify.api")
 	public ResponseDTO verify(@RequestBody NGO ngo) {
 
 		ResponseDTO responseDTO = ngoService.confirmLogin(ngo);

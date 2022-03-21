@@ -17,7 +17,7 @@ public class DocumentSectionController {
 	@Autowired
 	private DocumentSectionService documentSectionService;
 	
-	@RequestMapping(path="/document/add" , method = RequestMethod.POST)
+	@RequestMapping("/document.api")
 	public String add(@RequestBody DocumentSection ds) {
 		documentSectionService.add(ds);
 		return "{\"status\" : \"Document Section Record Added Successfully!\"}";

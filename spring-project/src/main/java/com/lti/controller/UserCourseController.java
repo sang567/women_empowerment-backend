@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.lti.entity.NGO;
-import com.lti.entity.User;
 import com.lti.entity.UserCourse;
 import com.lti.service.NGOService;
 import com.lti.service.UserCourseService;
@@ -30,7 +28,6 @@ public class UserCourseController {
 	
 	@RequestMapping(path = "/userCourse.api")
 	public String add(@RequestBody UserCourse uc) {
-
 		userCourseService.addCourse(uc);
 		return "{\"status\" : \"User Course  Details  Added Successfully!\"}";
 	}

@@ -12,11 +12,15 @@ import com.lti.entity.DocumentSection;
 @Component
 public class DocumentSectionDao extends GenericDao{
 
-	@Transactional
+	
 	public void addDocumentSection(DocumentSection ds) {
 		entityManager.persist(ds);
 	}
 
-	
+	@Transactional
+	public List<DocumentSection> fetchAll() {
+		Query q = entityManager.createQuery("select obj from DocumentSection as obj");
+		return q.getResultList();
+	}
 	
 }

@@ -32,9 +32,9 @@ public class NGOService {
 		String password = login.getPassword();
 		boolean flag = false;
 		List<NGO> list = ngoDao.fetchAll();
-		for (NGO x : list) {
-			if (username.equals(x.getUsername()) && password.equals(x.getPassword()))
-				return x;
+		for (NGO ng : list) {
+			if (username.equals(ng.getUsername()) && password.equals(ng.getPassword()))
+				return ng;
 		}
 		return null;
 	}

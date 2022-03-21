@@ -2,14 +2,14 @@ package com.lti.dao;
 
 import org.springframework.transaction.annotation.Transactional;
 
+import com.lti.entity.User;
+
 import java.util.List;
 
 import javax.persistence.Query;
 
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
-
-import com.lti.entity.User;
 
 @Component
 public class UserDao extends GenericDao {

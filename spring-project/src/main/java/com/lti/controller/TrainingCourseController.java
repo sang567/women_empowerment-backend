@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.lti.entity.NGO;
 import com.lti.entity.TrainingCourse;
 import com.lti.service.CourseService;
 
@@ -22,7 +21,7 @@ public class TrainingCourseController {
 	@Autowired
 	private CourseService courseService;
 
-	@RequestMapping(path = "/course.api")
+	@RequestMapping("/course.api")
 	public String add(@RequestBody TrainingCourse tc) {
 		courseService.add(tc);
 		return "{\"status\" : \"Course Details Added Successfully!\"}";

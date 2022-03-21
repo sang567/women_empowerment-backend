@@ -19,7 +19,7 @@ public class UserFamilyController {
 	@Autowired
 	private UserFamilyService userFamilyService;
 
-	@RequestMapping(path = "/userFamily/add", method = RequestMethod.POST)
+	@RequestMapping("/userFamily.api")
 	public String add(@RequestBody UserFamilyDetails ufd) {
 		userFamilyService.add(ufd);
 		return "{\"status\" : \"User Family  Record  Added Successfully!\"}";
